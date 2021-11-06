@@ -1,5 +1,5 @@
 <template>
-    <router-view />
+  <router-view />
 </template>
 
 <script>
@@ -11,13 +11,13 @@ export default {
       url_base: "https://api.openweathermap.org/data/2.5/",
       query: "",
       weather: {
-        name: 'Tashkent',
+        name: "Tashkent",
         sys: {
-          country: 'Uz'
+          country: "Uz",
         },
         main: {
-          temp: '16'
-        }
+          temp: "16",
+        },
       },
     };
   },
@@ -53,11 +53,13 @@ export default {
       let year = d.getFullYear();
 
       return `${day} | ${date} | ${month} | ${year}`;
-    }
+    },
   },
   methods: {
     fetchWeather() {
-      fetch(`${this.url_base}weather?q=${this.query}&units=metric&APPID=${this.api_key}`)
+      fetch(
+        `${this.url_base}weather?q=${this.query}&units=metric&APPID=${this.api_key}`
+      )
         .then((res) => {
           return res.json();
         })
