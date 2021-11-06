@@ -1,6 +1,6 @@
 <template>
   <div class="main w-full h-screen text-center flex items-center content-center">
-    <div class="container mx-auto px-60">
+    <div class="lg:container mx-auto px-60">
       <div class="flex flex-col-reverse lg:flex-row items-center justify-between">
         <div class="main-info p-3 lg:p-5 rounded-xl">
           <h3 class="main__title">
@@ -24,6 +24,7 @@
         </div>
       </div>
     </div>
+    <img src="../assets/bg.jpg" alt="" class="bg w-full h-full fixed top-0 left-0" style="z-index:-1;"git>
   </div>
 </template>
 
@@ -97,8 +98,6 @@ export default {
 
 <style lang="scss">
 .main {
-  background: url("../assets/bg.jpg") no-repeat;
-  background-size: cover;
   &-info {
     background-color: rgba(255, 255, 255, 0.6);
   }
