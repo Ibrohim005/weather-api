@@ -1,22 +1,22 @@
 <template>
   <div class="main w-full h-screen text-center flex items-center content-center">
     <div class="container mx-auto px-60">
-      <div class="flex items-center justify-between">
-        <div class="main-info p-5 rounded-xl">
-          <h3 class="main__title pt-2">
+      <div class="flex flex-col-reverse lg:flex-row items-center justify-between">
+        <div class="main-info p-3 lg:p-5 rounded-xl">
+          <h3 class="main__title">
             {{ weather.name }}, {{ weather.sys.country }}
           </h3>
           <p class="main__date">
             {{ dateBuilder }}
           </p>
           <h1 class="main__temp">
-            {{ Math.round(weather.main.temp) }}
+            {{ Math.round(weather.main.temp) }}°C
           </h1>
         </div>
         <div>
           <input
             v-model="query"
-            class="main__input p-4 transition rounded-xl border border-transparent focus:outline-none focus:ring-2 focus:ring-red-600 focus:border-transparent "
+            class="main__input mb-4 lg:mb-0 p-4 transition rounded-xl border border-transparent focus:outline-none focus:ring-2 focus:ring-red-600 focus:border-transparent "
             type="text"
             placeholder="Enter your country!"
             @keypress.enter="fetchWeather"
